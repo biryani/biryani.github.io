@@ -6,7 +6,7 @@ subtitle: Quantum ''and'' Computing
 
 profile:
   align: right
-  image: astro.jpg
+  image: IMG_9783.jpg
   image_circular: false # crops the image to make it circular
   more_info: 
  
