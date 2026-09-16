@@ -67,6 +67,21 @@ article {
   }
 }
 
+// Project cards on the landing page, which sit below a floated profile image
+
+.projects-home {
+  clear: both;
+  margin-bottom: 2rem;
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+  }
+}
+
 // Project pages
 
 .project-page {
