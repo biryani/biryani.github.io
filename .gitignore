@@ -11,3 +11,14 @@ assets/libs/
 node_modules/
 vendor
 .idea
+
+# Coding agent files (local-only, not for deployment)
+CLAUDE.md
+.claude/
+.cursor/
+.cursorrules
+.github/copilot-instructions.md
+GEMINI.md
+.gemini/
+.codex/
+AGENTS.md
