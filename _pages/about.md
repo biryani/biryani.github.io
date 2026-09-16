@@ -12,6 +12,12 @@ profile:
 
 news: false # includes a list of news items
 research_map: true # includes the three-field Venn diagram of all papers
+research_intro: > # the paragraph that sits beside that diagram
+  Very little of what I work on belongs to a single field. The questions
+  usually come out of quantum information, but the tools that answer them
+  are borrowed from machine learning and statistical physics, and the
+  interesting part is often the translation between the three. Each dot is
+  one paper, placed by how much it leans on each field.
 projects: true # includes the research project cards from _projects/
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page

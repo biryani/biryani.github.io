@@ -71,8 +71,9 @@ article {
 
 .research-map {
   clear: both;
-  margin: 0 auto 2.5rem;
-  max-width: 560px;
+  float: left;
+  width: 48%;
+  margin: 0 1.75rem 1.25rem 0;
 
   svg {
     width: 100%;
@@ -90,7 +91,7 @@ article {
 
   .field-label text {
     fill: var(--global-text-color-light);
-    font-size: 17px;
+    font-size: 21px;
     letter-spacing: 0.02em;
   }
 
@@ -100,6 +101,18 @@ article {
     stroke: var(--global-bg-color);
     stroke-width: 1.5;
   }
+
+  // Too narrow to sit beside body copy on a phone
+  @media (max-width: 600px) {
+    float: none;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+.research-intro {
+  margin-bottom: 1.5rem;
 }
 
 // Project cards on the landing page, which sit below a floated profile image

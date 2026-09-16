@@ -48,6 +48,9 @@ layout: default
       {% if page.research_map %}
         {% include research_map.liquid %}
       {% endif %}
+      {% if page.research_intro %}
+        <p class="research-intro">{{ page.research_intro }}</p>
+      {% endif %}
       <div class="projects projects-home">
         <div class="row row-cols-1 row-cols-md-2">
           {% assign sorted_projects = site.projects | sort: 'importance' %}
