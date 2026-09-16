@@ -1,0 +1,64 @@
+{%- assign g = site.data.research_fields.geometry -%}
+{%- assign d = g.radius | times: g.separation -%}
+{%- assign circumradius = d | times: 0.57735027 -%}
+{%- assign inradius = d | times: 0.28867513 -%}
+{%- assign half_d = d | times: 0.5 -%}
+{%- assign qx = g.centre_x | times: 1.0 -%}
+{%- assign qy = g.centre_y | minus: circumradius -%}
+{%- assign mx = g.centre_x | minus: half_d -%}
+{%- assign my = g.centre_y | plus: inradius -%}
+{%- assign sx = g.centre_x | plus: half_d -%}
+{%- assign sy = my -%}
+{%- assign label_gap = 30 -%}
+{%- assign label_top = qy | minus: g.radius | minus: label_gap -%}
+{%- assign label_bottom = my | plus: g.radius | plus: label_gap -%}
+{%- comment -%}
+  The lower two labels are pushed out over the non-overlapping half of each
+  circle, otherwise they collide with each other under the centre.
+{%- endcomment -%}
+{%- assign label_mx = mx | minus: g.label_spread -%}
+{%- assign label_sx = sx | plus: g.label_spread -%}
+
+<figure class="research-map">
+  <svg
+    viewBox="0 0 {{ g.width }} {{ g.height }}"
+    role="img"
+    aria-label="A Venn diagram of three overlapping fields — quantum computing, machine learning and statistical physics — with each publication placed according to how much it draws on each."
+  >
+    <g class="field-circle">
+      <circle cx="{{ qx }}" cy="{{ qy }}" r="{{ g.radius }}" />
+      <circle cx="{{ mx }}" cy="{{ my }}" r="{{ g.radius }}" />
+      <circle cx="{{ sx }}" cy="{{ sy }}" r="{{ g.radius }}" />
+    </g>
+
+    <g class="field-label">
+      <text x="{{ qx }}" y="{{ label_top }}" text-anchor="middle">quantum computing</text>
+      <text x="{{ label_mx }}" y="{{ label_bottom }}" text-anchor="middle">machine learning</text>
+      <text x="{{ label_sx }}" y="{{ label_bottom }}" text-anchor="middle">statistical physics</text>
+    </g>
+
+    {%- for p in site.data.research_fields.papers -%}
+      {%- assign wq = p.quantum | times: 1.0 -%}
+      {%- assign wm = p.ml | times: 1.0 -%}
+      {%- assign ws = p.stat | times: 1.0 -%}
+      {%- assign total = wq | plus: wm | plus: ws -%}
+
+      {%- assign x_q = wq | times: qx -%}
+      {%- assign x_m = wm | times: mx -%}
+      {%- assign x_s = ws | times: sx -%}
+      {%- assign px = x_q | plus: x_m | plus: x_s | divided_by: total -%}
+
+      {%- assign y_q = wq | times: qy -%}
+      {%- assign y_m = wm | times: my -%}
+      {%- assign y_s = ws | times: sy -%}
+      {%- assign py = y_q | plus: y_m | plus: y_s | divided_by: total -%}
+
+      {%- if p.nudge -%}
+        {%- assign px = px | plus: p.nudge[0] -%}
+        {%- assign py = py | plus: p.nudge[1] -%}
+      {%- endif -%}
+
+      <circle class="paper-dot" cx="{{ px | round: 2 }}" cy="{{ py | round: 2 }}" r="6.5" />
+    {%- endfor -%}
+  </svg>
+</figure>

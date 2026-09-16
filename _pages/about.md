@@ -11,6 +11,7 @@ profile:
   more_info:
 
 news: false # includes a list of news items
+research_map: true # includes the three-field Venn diagram of all papers
 projects: true # includes the research project cards from _projects/
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page

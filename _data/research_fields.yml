@@ -1,0 +1,118 @@
+# Positions for the research map on the home page.
+#
+# Each paper carries three weights. They are normalised and used as barycentric
+# coordinates over the triangle formed by the three circle centres, so a paper
+# weighted purely to one field lands on that circle's centre and an evenly
+# weighted one lands in the middle. Only the ratio between the weights matters.
+#
+# `nudge` is a purely cosmetic pixel offset applied after that placement, used
+# to separate papers that would otherwise be drawn on top of each other. It
+# never moves a dot out of the Venn region its weights put it in.
+#
+# The figure is unlabelled, so `key` and `label` are not rendered — they are
+# only here to say which paper each set of weights belongs to.
+
+geometry:
+  width: 520
+  height: 410
+  centre_x: 260
+  centre_y: 227
+  radius: 105
+  # How far the two lower field labels sit outboard of their circle centres.
+  label_spread: 52
+  # Centre-to-centre distance as a multiple of the radius. Must stay inside
+  # (1.155, 1.732): below that range two-field papers get swallowed by the
+  # triple-overlap region, above it the triple-overlap region stops existing.
+  separation: 1.35
+
+papers:
+  - key: abhijith2022quantum
+    label: Quantum algorithm implementations for beginners
+    quantum: 1.0
+    ml: 0.0
+    stat: 0.0
+
+  - key: abhijith2018spatial
+    label: Spatial search with multiple targets via flip-flop quantum walk
+    quantum: 1.0
+    ml: 0.0
+    stat: 0.0
+    nudge: [21, 5]
+
+  - key: abhijith2019improving
+    label: Improving query complexity of quantum spatial search in two dimensions
+    quantum: 1.0
+    ml: 0.0
+    stat: 0.0
+    nudge: [-5, 22]
+
+  - key: bartschi2024potential
+    label: Potential applications of quantum computing at Los Alamos
+    quantum: 0.9
+    ml: 0.05
+    stat: 0.05
+    nudge: [-22, -4]
+
+  - key: pareek2025limitations
+    label: Limitations of fault-tolerant quantum linear system solvers for power flow
+    quantum: 0.9
+    ml: 0.1
+    stat: 0.0
+    nudge: [-7, -29]
+
+  - key: Jayakumar2024universalframework
+    label: Universal framework for simultaneous tomography of states and SPAM noise
+    quantum: 0.65
+    ml: 0.35
+    stat: 0.0
+
+  - key: tuysuz2025learning
+    label: Learning response functions of analog quantum computers
+    quantum: 0.55
+    ml: 0.45
+    stat: 0.0
+    nudge: [-4, 9]
+
+  - key: shastry2022reliable
+    label: Reliable quantum kernel classification using fewer circuit evaluations
+    quantum: 0.5
+    ml: 0.5
+    stat: 0.0
+    nudge: [-20, -9]
+
+  - key: PhysRevResearch.6.033201
+    label: Learning energy-based representations of quantum many-body states
+    quantum: 0.3
+    ml: 0.35
+    stat: 0.35
+
+  - key: xlz6-yzxc
+    label: Efficient learning of lattice gauge theories with fermions
+    quantum: 0.15
+    ml: 0.4
+    stat: 0.45
+    nudge: [16, -9]
+
+  - key: jayakumar2026discrete
+    label: Discrete distributions are learnable from metastable samples
+    quantum: 0.0
+    ml: 0.5
+    stat: 0.5
+
+  - key: jayakumar2020learning
+    label: Learning of discrete graphical models with neural networks
+    quantum: 0.0
+    ml: 0.65
+    stat: 0.35
+
+  - key: smedira2026finite
+    label: Finite sample bounds for learning with score matching
+    quantum: 0.0
+    ml: 0.8
+    stat: 0.2
+
+  - key: pareek2024optimization
+    label: Optimization proxies from limited labelled data
+    quantum: 0.0
+    ml: 1.0
+    stat: 0.0
