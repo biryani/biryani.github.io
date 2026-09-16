@@ -2,7 +2,7 @@
 layout: project
 title: Learning theory for exponential families
 description: Provable, sample-efficient recovery of high-dimensional discrete distributions.
-img: assets/img/projects/learning-theory.jpg
+img: assets/img/projects/learning-theory.svg
 importance: 1
 related_publications: true
 ---

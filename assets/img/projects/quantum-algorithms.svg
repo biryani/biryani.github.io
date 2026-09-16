@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140" width="400" height="140" role="img" aria-label="A quantum circuit: four qubit wires with single-qubit gates, a controlled-NOT, and measurement.">
+  <g stroke="#9a9a9a" stroke-width="1.2" opacity="0.55">
+    <path d="M40 30 H360" />
+    <path d="M40 60 H360" />
+    <path d="M40 90 H360" />
+    <path d="M40 120 H360" />
+  </g>
+
+  <g stroke="#c8692a" stroke-width="1.8" fill="none">
+    <path d="M150 30 V90" />
+    <path d="M255 60 V120" />
+  </g>
+
+  <g fill="#c8692a">
+    <circle cx="150" cy="30" r="4.5" />
+    <circle cx="255" cy="60" r="4.5" />
+  </g>
+
+  <g fill="none" stroke="#c8692a" stroke-width="1.8">
+    <circle cx="150" cy="90" r="8.5" />
+    <path d="M141.5 90 H158.5 M150 81.5 V98.5" />
+    <circle cx="255" cy="120" r="8.5" />
+    <path d="M246.5 120 H263.5 M255 111.5 V128.5" />
+  </g>
+
+  <g fill="none" stroke="#c8692a" stroke-width="1.8">
+    <rect x="76" y="18" width="24" height="24" rx="3" />
+    <rect x="76" y="78" width="24" height="24" rx="3" />
+    <rect x="196" y="48" width="24" height="24" rx="3" />
+    <rect x="196" y="108" width="24" height="24" rx="3" />
+  </g>
+  <g fill="#c8692a" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-style="italic" text-anchor="middle">
+    <text x="88" y="35">H</text>
+    <text x="88" y="95">H</text>
+    <text x="208" y="65">X</text>
+    <text x="208" y="125">H</text>
+  </g>
+
+  <g fill="none" stroke="#9a9a9a" stroke-width="1.6">
+    <rect x="312" y="18" width="26" height="24" rx="3" />
+    <path d="M318 36 a7 7 0 0 1 14 0" />
+    <path d="M325 36 L332 26" />
+  </g>
+</svg>

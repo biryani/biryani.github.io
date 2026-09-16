@@ -2,7 +2,7 @@
 layout: project
 title: Quantum algorithms and applications
 description: What quantum computers can actually do for concrete problems — and where the claims break down.
-img: assets/img/projects/quantum-algorithms.jpg
+img: assets/img/projects/quantum-algorithms.svg
 importance: 3
 related_publications: true
 ---

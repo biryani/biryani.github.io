@@ -2,7 +2,7 @@
 layout: project
 title: Machine learning for quantum systems
 description: Statistical estimation applied to quantum states and the devices that realize them.
-img: assets/img/projects/ml-quantum.jpg
+img: assets/img/projects/ml-quantum.svg
 importance: 2
 related_publications: true
 ---

@@ -2,7 +2,7 @@
 layout: project
 title: Quantum walks and spatial search
 description: Discrete-time quantum walk algorithms for search on graphs, and the stubborn two-dimensional case.
-img: assets/img/projects/quantum-walks.jpg
+img: assets/img/projects/quantum-walks.svg
 importance: 4
 related_publications: true
 ---
