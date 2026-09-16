@@ -1,7 +1,8 @@
 <div class="col">
   <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
     <div class="card h-100 hoverable">
-      {% if project.img %}
+      {% capture project_img_exists %}{% file_exists {{ project.img }} %}{% endcapture %}
+      {% if project.img and project_img_exists == 'true' %}
         {%
           include figure.liquid
           loading="eager"
@@ -10,6 +11,8 @@
           alt="project thumbnail"
           class="card-img-top"
         %}
+      {% else %}
+        <div class="card-accent-bar"></div>
       {% endif %}
       <div class="card-body">
         <h2 class="card-title">{{ project.title }}</h2>
