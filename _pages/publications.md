@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: The complete list, newest first. Grouped by research thread on the <a href="/projects/">research</a> page.
+description: The complete list, newest first. The research page groups these by topic.
 nav: true
 nav_order: 2
 ---
