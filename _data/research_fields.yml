@@ -13,13 +13,11 @@
 # only here to say which paper each set of weights belongs to.
 
 geometry:
-  width: 520
+  width: 352
   height: 410
-  centre_x: 260
+  centre_x: 176
   centre_y: 227
   radius: 105
-  # How far the two lower field labels sit outboard of their circle centres.
-  label_spread: 52
   # Centre-to-centre distance as a multiple of the radius. Must stay inside
   # (1.155, 1.732): below that range two-field papers get swallowed by the
   # triple-overlap region, above it the triple-overlap region stops existing.

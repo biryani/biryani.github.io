@@ -72,7 +72,9 @@ article {
 .research-map {
   clear: both;
   float: right;
-  width: 48%;
+  // Matches the .profile width so the figure sits in the same column as the
+  // photo above it
+  width: 30%;
   margin: 0 0 1.25rem 1.75rem;
 
   svg {
@@ -91,7 +93,7 @@ article {
 
   .field-label text {
     fill: var(--global-text-color-light);
-    font-size: 21px;
+    font-size: 17px;
     letter-spacing: 0.02em;
   }
 

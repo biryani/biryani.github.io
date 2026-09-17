@@ -13,11 +13,12 @@
 {%- assign label_top = qy | minus: g.radius | minus: label_gap -%}
 {%- assign label_bottom = my | plus: g.radius | plus: label_gap -%}
 {%- comment -%}
-  The lower two labels are pushed out over the non-overlapping half of each
-  circle, otherwise they collide with each other under the centre.
+  The lower two labels are anchored to the outer edges of the circle group
+  rather than centred under their own circle. Centring them made the drawing
+  wider than the circles, which left the figure visibly inset from the profile
+  photo it sits beneath. Anchoring outward keeps the whole drawing inside the
+  circles' own width.
 {%- endcomment -%}
-{%- assign label_mx = mx | minus: g.label_spread -%}
-{%- assign label_sx = sx | plus: g.label_spread -%}
 
 <figure class="research-map">
   <svg
@@ -33,8 +34,8 @@
 
     <g class="field-label">
       <text x="{{ qx }}" y="{{ label_top }}" text-anchor="middle">quantum computing</text>
-      <text x="{{ label_mx }}" y="{{ label_bottom }}" text-anchor="middle">machine learning</text>
-      <text x="{{ label_sx }}" y="{{ label_bottom }}" text-anchor="middle">statistical physics</text>
+      <text x="0" y="{{ label_bottom }}" text-anchor="start">machine learning</text>
+      <text x="{{ g.width }}" y="{{ label_bottom }}" text-anchor="end">statistical physics</text>
     </g>
 
     {%- for p in site.data.research_fields.papers -%}
