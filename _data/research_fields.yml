@@ -114,3 +114,45 @@ papers:
     quantum: 0.0
     ml: 1.0
     stat: 0.0
+
+  - key: krueger2026quantum
+    label: Quantum Hamiltonian Analysis Toolkit
+    quantum: 1.0
+    ml: 0.0
+    stat: 0.0
+    nudge: [8, -15]
+
+  - key: pareek2026conditions
+    label: Conditions for quantum advantage in AC power flow
+    quantum: 1.0
+    ml: 0.0
+    stat: 0.0
+    nudge: [12, 20]
+
+  - key: pang2025autoregressive
+    label: Autoregressive graphical models for ground states of stoquastic Hamiltonians
+    quantum: 0.35
+    ml: 0.35
+    stat: 0.3
+    nudge: [-6, -8]
+
+  - key: shukla2025statistical
+    label: Learning of statistical field theories
+    quantum: 0.2
+    ml: 0.35
+    stat: 0.45
+    nudge: [-3, 5]
+
+  - key: elamvazhuthi2026discrete
+    label: Discrete diffusion with sample-efficient estimators for conditionals
+    quantum: 0.0
+    ml: 0.6
+    stat: 0.4
+    nudge: [3, 14]
+
+  - key: jayakumar2026computationally
+    label: Computationally sufficient statistics for Ising models
+    quantum: 0.0
+    ml: 0.4
+    stat: 0.6
+    nudge: [3, 0]
