@@ -9,4 +9,7 @@ papers:
   - xlz6-yzxc
   - Jayakumar2024universalframework
   - tuysuz2025learning
+  - pang2025autoregressive
 ---
+Classical machine-learning algorithms are well suited to many quantum applications. I have used classical ML techniques to study quantum ground states of lattice models, develop quantum tomography algorithms, and characterize near-term quantum devices, among other applications. Much of my postdoctoral work has focused on problems along these lines.
+ 
