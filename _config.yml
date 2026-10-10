@@ -323,6 +323,9 @@ scholar:
   query: "@*"
   group_by: year
   group_order: descending
+  # Newest first within a year; also sorts the cited lists on project pages.
+  sort_by: year,month
+  order: descending
 
 # Display different badges withs stats for your publications
 enable_publication_badges:

@@ -16,14 +16,14 @@ layout: default
       nocite registers a key for the bibliography below without putting a
       citation marker in the prose, and resolves its argument as a variable, so
       the list comes from front matter and the page body stays free text.
-      Entries render in the order listed.
+      Entries are sorted newest first by year, then month where one is given.
     {% endcomment %}
     {% for paper_key in page.papers -%}
       {%- nocite paper_key -%}
     {%- endfor %}
     <h2 class="project-papers-heading">Papers</h2>
     <div class="publications">
-      {% bibliography --cited_in_order --group_by none %}
+      {% bibliography --cited --group_by none %}
     </div>
   {% endif %}
 
