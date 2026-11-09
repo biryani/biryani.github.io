@@ -23,8 +23,8 @@
 <figure class="research-map">
   <svg
     viewBox="0 0 {{ g.width }} {{ g.height }}"
-    role="img"
-    aria-label="A Venn diagram of three overlapping fields — quantum computing, machine learning and statistical physics — with each publication placed according to how much it draws on each."
+    role="group"
+    aria-label="A Venn diagram of three overlapping fields — quantum computing, machine learning and statistical physics — with each publication placed according to how much it draws on each. Select a dot to read the paper."
   >
     <g class="field-circle">
       <circle cx="{{ qx }}" cy="{{ qy }}" r="{{ g.radius }}" />
@@ -59,7 +59,29 @@
         {%- assign py = py | plus: p.nudge[1] -%}
       {%- endif -%}
 
-      <circle class="paper-dot" cx="{{ px | round: 2 }}" cy="{{ py | round: 2 }}" r="6.5" />
+      <a class="paper-link" href="{{ p.url | escape }}" aria-label="{{ p.label | escape }}" tabindex="0">
+        <title>{{ p.label | escape }}</title>
+        <circle class="paper-hit-area" cx="{{ px | round: 2 }}" cy="{{ py | round: 2 }}" r="10" />
+        <circle class="paper-dot" cx="{{ px | round: 2 }}" cy="{{ py | round: 2 }}" r="6.5" />
+      </a>
     {%- endfor -%}
   </svg>
+  <figcaption>
+    <p class="research-map-hint">Select a dot to read the paper.</p>
+    <details class="research-map-papers">
+      <summary>Browse all {{ site.data.research_fields.papers | size }} papers</summary>
+      <ul>
+        {%- for p in site.data.research_fields.papers -%}
+          <li>
+            <a href="{{ p.url | escape }}">
+              {{ p.label | escape }}
+              {%- if p.url contains 'arxiv.org' %}
+                <span class="paper-version">(arXiv)</span>
+              {%- endif -%}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </details>
+  </figcaption>
 </figure>

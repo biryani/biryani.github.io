@@ -9,8 +9,8 @@
 # to separate papers that would otherwise be drawn on top of each other. It
 # never moves a dot out of the Venn region its weights put it in.
 #
-# The figure is unlabelled, so `key` and `label` are not rendered — they are
-# only here to say which paper each set of weights belongs to.
+# `label` names each link and `url` points to the publisher where available,
+# otherwise to the preprint. Keep these links current when papers are published.
 
 geometry:
   width: 352
@@ -25,12 +25,14 @@ geometry:
 
 papers:
   - key: abhijith2022quantum
+    url: https://doi.org/10.1145/3517340
     label: Quantum algorithm implementations for beginners
     quantum: 1.0
     ml: 0.0
     stat: 0.0
 
   - key: abhijith2018spatial
+    url: https://www.rintonpress.com/xxqic18/qic-18-1516/1295-1331.pdf
     label: Spatial search with multiple targets via flip-flop quantum walk
     quantum: 1.0
     ml: 0.0
@@ -38,6 +40,8 @@ papers:
     nudge: [21, 5]
 
   - key: abhijith2019improving
+    # Publisher PDF returns a server error; arXiv includes the published text and correction.
+    url: https://arxiv.org/abs/1810.12600
     label: Improving query complexity of quantum spatial search in two dimensions
     quantum: 1.0
     ml: 0.0
@@ -45,6 +49,7 @@ papers:
     nudge: [-5, 22]
 
   - key: bartschi2024potential
+    url: https://arxiv.org/abs/2406.06625
     label: Potential applications of quantum computing at Los Alamos
     quantum: 0.9
     ml: 0.05
@@ -52,6 +57,7 @@ papers:
     nudge: [-22, -4]
 
   - key: pareek2025limitations
+    url: https://doi.org/10.1109/TPWRS.2025.3613139
     label: Limitations of fault-tolerant quantum linear system solvers for power flow
     quantum: 0.9
     ml: 0.1
@@ -59,12 +65,14 @@ papers:
     nudge: [-7, -29]
 
   - key: Jayakumar2024universalframework
+    url: https://doi.org/10.22331/q-2024-07-30-1426
     label: Universal framework for simultaneous tomography of states and SPAM noise
     quantum: 0.65
     ml: 0.35
     stat: 0.0
 
   - key: tuysuz2025learning
+    url: https://arxiv.org/abs/2503.12520
     label: Learning response functions of analog quantum computers
     quantum: 0.55
     ml: 0.45
@@ -72,6 +80,7 @@ papers:
     nudge: [-4, 9]
 
   - key: shastry2022reliable
+    url: https://arxiv.org/abs/2210.06971
     label: Reliable quantum kernel classification using fewer circuit evaluations
     quantum: 0.5
     ml: 0.5
@@ -79,12 +88,14 @@ papers:
     nudge: [-20, -9]
 
   - key: PhysRevResearch.6.033201
+    url: https://doi.org/10.1103/PhysRevResearch.6.033201
     label: Learning energy-based representations of quantum many-body states
     quantum: 0.3
     ml: 0.35
     stat: 0.35
 
   - key: xlz6-yzxc
+    url: https://doi.org/10.1103/xlz6-yzxc
     label: Efficient learning of lattice gauge theories with fermions
     quantum: 0.15
     ml: 0.4
@@ -92,30 +103,35 @@ papers:
     nudge: [16, -9]
 
   - key: jayakumar2026discrete
+    url: https://doi.org/10.1038/s41467-026-75439-1
     label: Discrete distributions are learnable from metastable samples
     quantum: 0.0
     ml: 0.5
     stat: 0.5
 
   - key: jayakumar2020learning
+    url: https://proceedings.neurips.cc/paper_files/paper/2020/hash/3cc697419ea18cc98d525999665cb94a-Abstract.html
     label: Learning of discrete graphical models with neural networks
     quantum: 0.0
     ml: 0.65
     stat: 0.35
 
   - key: smedira2026finite
+    url: https://proceedings.mlr.press/v336/smedira26a.html
     label: Finite sample bounds for learning with score matching
     quantum: 0.0
     ml: 0.8
     stat: 0.2
 
   - key: pareek2024optimization
+    url: https://proceedings.mlr.press/v267/pareek25a.html
     label: Optimization proxies from limited labelled data
     quantum: 0.0
     ml: 1.0
     stat: 0.0
 
   - key: krueger2026quantum
+    url: https://arxiv.org/abs/2605.11162
     label: Quantum Hamiltonian Analysis Toolkit
     quantum: 1.0
     ml: 0.0
@@ -123,6 +139,7 @@ papers:
     nudge: [8, -15]
 
   - key: pareek2026conditions
+    url: https://arxiv.org/abs/2608.06711
     label: Conditions for quantum advantage in AC power flow
     quantum: 1.0
     ml: 0.0
@@ -130,6 +147,7 @@ papers:
     nudge: [12, 20]
 
   - key: pang2025autoregressive
+    url: https://doi.org/10.1109/QCE65121.2025.00176
     label: Autoregressive graphical models for ground states of stoquastic Hamiltonians
     quantum: 0.35
     ml: 0.35
@@ -137,6 +155,7 @@ papers:
     nudge: [-6, -8]
 
   - key: shukla2025statistical
+    url: https://arxiv.org/abs/2511.09859
     label: Learning of statistical field theories
     quantum: 0.2
     ml: 0.35
@@ -144,6 +163,7 @@ papers:
     nudge: [-3, 5]
 
   - key: elamvazhuthi2026discrete
+    url: https://arxiv.org/abs/2602.20293
     label: Discrete diffusion with sample-efficient estimators for conditionals
     quantum: 0.0
     ml: 0.6
@@ -151,6 +171,7 @@ papers:
     nudge: [3, 14]
 
   - key: jayakumar2026computationally
+    url: https://arxiv.org/abs/2602.12449
     label: Computationally sufficient statistics for Ising models
     quantum: 0.0
     ml: 0.4
@@ -158,6 +179,7 @@ papers:
     nudge: [3, 0]
 
   - key: shukla2026operator
+    url: https://arxiv.org/abs/2609.25246
     label: Operator score matching for learning quantum Hamiltonians
     quantum: 0.4
     ml: 0.3
